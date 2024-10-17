@@ -50,7 +50,7 @@ nav {
     justify-content: flex-end;
     background-color: var(--nav-background-color);
     font-size: 1.2rem;
-    padding: 0.5rem;/
+    padding: 0.5rem;
 }
 
 nav a {
@@ -60,6 +60,9 @@ nav a {
     padding: 1rem;
     border: 2px solid var(--primary-color); /* Adds a border around the menu */
     border-radius: 10px; /* Optional: adds rounded corners */
+    margin-left: 0.5rem; /* Add space between nav items */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
 }
 
 nav a:link, nav a:visited {
