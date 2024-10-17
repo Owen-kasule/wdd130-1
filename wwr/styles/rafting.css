@@ -50,6 +50,7 @@ nav {
     justify-content: flex-end;
     background-color: var(--nav-background-color);
     font-size: 1.2rem;
+    padding: 0.5rem;/
 }
 
 nav a {
