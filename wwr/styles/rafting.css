@@ -1,279 +1,118 @@
-:root {
-    --primary-color: raisin black;
-    --secondary-color: English violet;
-    --accent1-color: #7d6b91;
-    --accent2-color: cool gray;
-
-    --heading-font: POPPINS 400,700, cursive;
-    --paragraph-font: Roboto 400,700, sans-serif;
-
-    --nav-background-color: var(--primary-color);
-    --nav-link-color: var(--secondary-color);
-    --nav-hover-link-color: var(--accent1-color);
-    --nav-hover-background-color: var(--accent2-color);
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: var(--paragraph-font);
-    max-width: 90%;
-    padding: 20px;
-    margin: 0 auto;
-    justify-content: center;
-    background-color: #d3e0ea; /* Light blue gray background */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-    text-align: center; /* Center the text */
-}
-
-p {
-    font-size: 18px;
-}
-
+/* Header styles */
 header {
+    background-color: #f4f4f4;
+    padding: 1rem;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    padding: 20px;
-    background-color: var(--accent1-color);
 }
 
 header img {
-    width: 150px; /* Set the standard width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 100px;
 }
 
-nav {
+nav ul {
     display: flex;
+    list-style: none;
     justify-content: flex-end;
-    background-color: var(--nav-background-color);
-    font-size: 1.2rem;
-    padding: 0.5rem;
 }
 
-nav a {
-    display: block;
-    color: var(--nav-link-color);
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
     text-decoration: none;
-    padding: 1rem;
-    border: 2px solid var(--primary-color); /* Adds a border around the menu */
-    border-radius: 10px; /* Optional: adds rounded corners */
-    margin-left: 0.5rem; /* Add space between nav items */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
+    color: #333;
 }
 
-nav a:link, nav a:visited {
-    color: var(--nav-link-color);
-}
-
-nav a:hover,nav a:focus {
-    background-color: var(--primary-color);
-    color: var(--nav-hover-background-color);
-    outline: none; /* Remove default focus outline */
-    box-shadow: 0 0 0 3px var(--focus-color); /* Add a focus indicator */
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .hero {
-    position: relative;
-    align-items: center;
-    background-image: url(../images/hero-image.png);
-    background-position: center;
-    background-size: cover;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-    background-color: #add8e6; /* Light blue color close to the blue of water */
-    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .hero h1 {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.425);
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
-    border-radius: 5px;
-    font-size: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(222, 255, 255, 0.425);
-    padding: 20px;
-    max-width: 60%;
-    border-radius: 10px;
-}
-
-.hero article img {
-    float: right;
-    width: 100px;
+.hero img {
+    max-width: 100%;
     height: auto;
-    margin-left: 20px;
 }
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px; /* Ensure space between sections */
-}
-
-section figure {
-    display: flex; /* Align items horizontally (image and caption) */
-    margin: 10px;
-    text-align: center; /* Center the text within the figure */
-}
-
-
-section figcaption {
-    margin-left: 20px; /* Space between image and caption */
-    font-size: 1.2em; /* Caption size */
-}
-
-
-section figcaption {
-    margin-top: 5px;
-    font-size: 0.9em;
-    color: var(--primary-color);
-}
-
-section img {
-    width: 150px; /* Increase the width */
-    height: auto; /* Maintain aspect ratio */
-    margin: 5px;
-    border-radius: 10px; /* Add rounded corners */
-    object-fit: cover; /* Ensure images maintain aspect ratio and cover the area */
-    display: flex;
-    padding: 20px;
-
-}
-
 
 .history {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
 }
 
 .history h2 {
-    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.adventures h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+figure {
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.history-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    text-align: left;
-}
-
-.history img {
-    width: 30%; /* Adjust width as needed */
+figure img {
+    max-width: 100%;
     height: auto;
-    margin: 0 20px;
-    border-radius: 10px;
 }
 
-.history p {
-    width: 30%; /* Adjust width as needed */
-    margin: 0 20px;
+figcaption {
+    margin-top: 0.5rem;
 }
 
-.adventures {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.adventures figure {
-    width: 18%;
-    margin: 0;
-    text-align: center;
-    margin-bottom: 20px; /* Add some space between rows */
-    display: flex;
-}
-
-.adventures img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: flex;
-}
-
-.adventures figcaption {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 0.9em; /* Adjust size as needed */
-    color: var(--primary-color);
-}
-
+/* Footer styles */
 footer {
-    margin-top: 20px;
-    border-top: 1px solid steelblue;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
-footer .copyright {
-    flex-grow: 1;
-    text-align: center;
-}
-
-footer .sociallinks {
+.social-icons {
     display: flex;
-    gap: 10px;
-    margin-left: auto; /* Pushes the social media icons to the right */
 }
 
-.sociallinks a {
-    margin: 0 10px;
+.social-icons a {
+    margin-left: 1rem;
 }
 
-.sociallinks img {
-    width: 30px;
-    height: 30px;
-}
-
-/* Ensure the layout is responsive */
-@media (max-width: 768px) {
-    header {
-        grid-template-columns: 1fr;
-    }
-
-    nav {
-        justify-content: center;
-    }
-
-    .history {
-        grid-template-columns: 1fr;
-    }
-
-    .adventures figure {
-        width: 48%;
-    }
-}
-
-@media (max-width: 480px) {
-    .adventures figure {
-        width: 100%;
-    }
+.social-icons img {
+    width: 24px;
+    height: 24px;
 }
