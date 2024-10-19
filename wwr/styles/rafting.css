@@ -1,5 +1,12 @@
 /* CSS for Roike Adventures website */
 
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Color Variables */
 :root {
     --primary-color: #272838;      /* Raisin Black */
@@ -103,6 +110,30 @@ nav a:hover {
 
 main {
     padding: 20px;
+}
+
+main img {
+    float: right;
+}
+
+/* Class Selectors */
+.box {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    margin: 10px 0;
+}
+
+aside {
+    padding: 20px;
+    background-color: var(--accent1-color);
+    color: #fff;
+    position: relative;
+}
+
+aside h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 footer {
