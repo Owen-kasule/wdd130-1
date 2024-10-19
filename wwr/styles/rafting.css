@@ -127,23 +127,11 @@ aside {
     padding: 20px;
     background-color: var(--accent1-color);
     color: #fff;
-    position: relative;
 }
 
 aside h2 {
-    position: absolute;
     top: 10px;
     left: 10px;
-}
-
-footer {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
 }
 
 /* Media Queries */
