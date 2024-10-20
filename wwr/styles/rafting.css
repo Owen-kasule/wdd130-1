@@ -1,5 +1,6 @@
 /* CSS for Roike Adventures website */
-/* Color Variables based on your color palette */
+
+/* Color Variables */
 :root {
     --primary-color: #272838;      /* Raisin Black */
     --secondary-color: #5D536B;    /* English Violet */
@@ -15,17 +16,15 @@
     --nav-hover-background-color: var(--accent1-color);
 }
 
-/* General body and text settings */
 body {
     font-family: var(--paragraph-font);
-    background-color: #f4f4f9; /* Light off-white background */
     max-width: 90%;
-    margin: 0 auto;
     padding: 20px;
+    margin: 0 auto;
+    background-color: #f4f4f9;
     color: var(--primary-color);
 }
 
-/* Headings */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
@@ -42,39 +41,35 @@ h2 {
     font-size: 2rem;
 }
 
-/* Paragraphs */
 p {
-    font-family: var(--paragraph-font);
-    font-weight: 400;
     font-size: 18px;
     line-height: 1.6;
 }
 
-header img {
-    width: 150px;
-    height: auto;
-}
-
-/* Header */
 header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
     padding: 20px;
     background-color: var(--accent1-color);
-    
+}
+
+header img {
+    width: 150px;
+    height: auto; /* Uncomment if using an image */
 }
 
 nav {
-    background-color: var(--nav-background-color);
     display: flex;
-    gap: 1rem;
+    justify-content: flex-end;
+    background-color: var(--nav-background-color);
     font-size: 1.2rem;
 }
 
 nav a {
-    text-decoration: none;
+    display: block;
     color: var(--nav-link-color);
+    text-decoration: none;
     padding: 1rem;
     border: 2px solid var(--primary-color);
     border-radius: 8px;
@@ -85,18 +80,13 @@ nav a:hover {
     background-color: var(--nav-hover-background-color);
 }
 
-/* Hero Section */
 .hero {
     position: relative;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: var(--accent2-color);
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    max-width: 800px;
-    height: auto;
+    height: 100vh;
     border-radius: 10px;
 }
 
@@ -108,53 +98,13 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 5px;
+    font-size: 40px;
 }
 
-/* Hero article */
-.hero article {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.8);
+main {
     padding: 20px;
-    max-width: 60%;
-    border-radius: 8px;
 }
 
-.hero article img {
-    float: right;
-    width: 100px;
-    height: auto;
-    margin-left: 20px;
-}
-
-/* Sections */
-section {
-    margin: 40px 0;
-}
-
-section img {
-    width: 100%;
-    max-width: 400px;
-    height: 200px;
-    margin: 5px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-/* Adventure Gallery Grid */
-.adventure-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-figure {
-    text-align: center;
-}
-
-/* Footer */
 footer {
     background-color: var(--primary-color);
     color: #fff;
@@ -162,26 +112,27 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 }
 
-/* Social Links */
-.sociallinks a {
-    margin-left: 10px;
-}
-
-.sociallinks img {
-    width: 30px;
-    height: 30px;
-}
-
-/* Media Queries for Mobile Responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+
     nav {
         flex-direction: column;
         align-items: center;
     }
 
-    .hero article {
-        max-width: 90%;
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 20px;
     }
 }
